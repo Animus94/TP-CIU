@@ -1,0 +1,14 @@
+ul{
+    list-style: none;
+    display: flex;
+}
+
+li{
+    display: flex;
+    margin-right: 7px;
+    
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+

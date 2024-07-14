@@ -1,8 +1,9 @@
 ---
-import { Header } from '../components/Header';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -10,20 +11,20 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-			<Header></Header>
-		<slot/> 
-	</body>
-</html>
- <style is:global>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <slot />
+    <Footer />
+  </body>
+  <!-- <style is:global>
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -36,8 +37,8 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif,system-ui, sans-serif;
-		background: #221711ea;
+		font-family: system-ui, sans-serif;
+		background: #13151a;
 		background-size: 224px;
 		/* estilos comunes a todas las paginas  */
 		
@@ -53,24 +54,5 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
-	.card-content {
-    background-color: #623c33;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(225, 172, 14, 0.1); 
-    padding: 20px; 
-    max-width: 300px; 
-    margin: 20px auto; 
-    font-family: cursive; color:rgb(245, 154, 70) 
-}
-
-
-
-h2{
-	font-family: sans-serif; color:orange 
-}
-
-h5{
-	font-size: large;
-	font-family: 'Arial Narrow Bold', sans-serif; color: #fdd433ea;
-}
-</style> 
+</style> -->
+</html>
