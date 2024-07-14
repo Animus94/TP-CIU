@@ -1,8 +1,10 @@
 ---
+import Catalogo from "../components/Catalogo";
+import GoogleMap from "../components/GoogleMap";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 ---
 
 <Layout title="Cafeteria">
-  <h1>Hola Mundo</h1>
+  <Catalogo client:load />
+  <GoogleMap />
 </Layout>
