@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { menuItems } from "../utils/menu";
+import { menuItems } from "../utils/data";
 import "../styles/Catalogo.css";
 
 function Catalogo() {
@@ -15,6 +15,7 @@ function Catalogo() {
   return (
     <>
       {/*catalogo del menu*/}
+      {/* <img className="bk_image" src="fondo_cafeteria.jpg" /> */}
       <section className="carousel">
         <button
           className="control-left"
@@ -27,6 +28,7 @@ function Catalogo() {
           <h2>{currentItem.name}</h2>
           <p>{currentItem.description}</p>
           <p>${currentItem.price.toFixed(2)}</p>
+          <a href="./menu">Pide el tuyo</a>
         </article>
         <button
           className="control-right"
@@ -35,7 +37,6 @@ function Catalogo() {
           &#8250;
         </button>
       </section>
-      <a href="./menu">Pide el tuyo</a>
     </>
   );
 }

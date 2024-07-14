@@ -1,6 +1,6 @@
 import  { useState } from 'react';
 import "../styles/CafeMenu.css";
-import { menuItems } from '../utils/menu';
+import { menuItems } from '../utils/data';
 
 interface SelectedItem {
   id: number;

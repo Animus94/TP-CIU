@@ -21,66 +21,82 @@ const { title } = Astro.props;
   </head>
   <body>
     <Navbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
-   <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-		html {
-		font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif,system-ui, sans-serif;
-		background: #221711ea;
-		background-size: 224px;
-		/* estilos comunes a todas las paginas  */
-		
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-	.card-content {
-    background-color: #623c33;
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(225, 172, 14, 0.1); 
-    padding: 20px; 
-    max-width: 300px; 
-    margin: 20px auto; 
-    font-family: cursive; color:rgb(245, 154, 70) 
-}
+  <style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif, system-ui,
+        sans-serif;
+      background: #221711ea;
+      background-size: 224px;
+      /* estilos comunes a todas las paginas  */
+    }
 
-.card{
-	background-color: #b09637ea;
-	border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(225, 172, 14, 0.1); 
-    padding: 20px; 
-    max-width: 300px; 
-    margin: 20px auto; 
-}
+    body {
+      box-sizing: border-box;
+      margin: 0;
+    }
 
-h2{
-	font-family: sans-serif; color:orange 
-}
+    main {
+      position: relative;
+      height: 100dvh;
+    }
 
-h5{
-	font-size: large;
-	font-family: 'Arial Narrow Bold', sans-serif; color: #fdd433ea;
-}
-</style> 
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+    .card-content {
+      background-color: #623c33;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(225, 172, 14, 0.1);
+      padding: 20px;
+      max-width: 300px;
+      margin: 20px auto;
+      font-family: cursive;
+      color: rgb(245, 154, 70);
+    }
 
+    .card {
+      background-color: #b09637ea;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(225, 172, 14, 0.1);
+      padding: 20px;
+      max-width: 300px;
+      margin: 20px auto;
+    }
+
+    h2 {
+      font-family: sans-serif;
+      color: orange;
+    }
+
+    h5 {
+      font-size: large;
+      font-family: "Arial Narrow Bold", sans-serif;
+      color: #fdd433ea;
+    }
+  </style>
 </html>

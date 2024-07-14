@@ -1,4 +1,4 @@
-import { navbarLinks } from "../utils/menu";
+import { navbarLinks } from "../utils/data";
 import "../styles/navbar.css"; // Acá se importan los estilos que tiene el navbar en la pagina principal
 
 function Navbar() {
