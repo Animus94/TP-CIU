@@ -3,6 +3,7 @@ interface MenuItem {
   name: string;
   description: string;
   price: number;
+  img?: string;
 }
 
 export const menuItems: MenuItem[] = [
@@ -16,3 +17,23 @@ export const menuItems: MenuItem[] = [
   { id: 8, name: 'Sandwich de Pavo', description: 'Sandwich de pavo con lechuga y tomate', price: 5.0 },
   { id: 9, name: 'Ensalada César', description: 'Ensalada César con pollo y aderezo', price: 6.5 }
 ];
+
+interface NavbarLinks{
+  name: string;
+  href: string;
+}
+
+export const navbarLinks: NavbarLinks[] = [
+  {
+    name: "Inicio",
+    href: "/"
+  },
+  {
+    name: "Menu",
+    href: "/menu"
+  },
+  {
+    name: "Galeria",
+    href: "/galeria"
+  }
+]
