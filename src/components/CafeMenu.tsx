@@ -56,7 +56,7 @@ const CafeMenu = () => {
       </div>
       <div className="total-price-section">
         <button onClick={calculateTotalPrice}>Calcular Precio Total</button>
-        <h4>Precio Total: ${totalPrice.toFixed(2)}</h4>
+        <h4 className='precioTotal'>Precio Total: ${totalPrice.toFixed(2)}</h4>
       </div>
     </div>
   );
