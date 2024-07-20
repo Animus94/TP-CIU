@@ -1,0 +1,25 @@
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Arial Narrow Bold', sans-serif;
+    background-color: #c7edf5; /* Mantiene el color de fondo */
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px; /* Añadido para espacio interno */
+    
+    color: #2a6a7b; /* Un tono más oscuro de azul para mejor legibilidad */
+    font-size: 1.25rem; /* Ajustado a tamaño grande */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para un aspecto más moderno */
+    
+    position: fixed; /* Fija el footer */
+    bottom: 0; /* Al pie de la página */
+    width: 100%; /* Ocupa todo el ancho */
+    max-width: none; /* Anula el max-width anterior */
+}
