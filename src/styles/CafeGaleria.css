@@ -1,9 +1,3 @@
-.cartaImagen{
-    width: 250px;
-    height: 250px;
-}
-
-/*
 body, html {
     margin: 0;
     padding: 0;
@@ -12,14 +6,49 @@ body, html {
 }
 
 .contenedorCartas {
-    background-color: green;
+    background-color: rgb(169, 142, 75);
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-color: rgb(128, 92, 0);
+    background-image: url('hojas.jpeg');
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
 }
 
-.carta{
-    flex: 50%;
+.carta {
+    flex: 1 1 calc(50% - 20px); /* Calcula el ancho de las cartas para que ocupen la mitad del contenedor menos el margen */
     margin: 10px;
-    background-color: white;
-    border: 5px solid red;
+    background-color: rgb(133, 27, 27);
+    border: 5px solid rgb(189, 134, 108);
+    box-sizing: border-box;
+    max-width: 250px; /* Limita el ancho máximo de las cartas */
 }
-*/
+
+.cartaImagen {
+    width: 100%; /* Ajusta la imagen para que ocupe el 100% del ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+}
+
+.cartaContent {
+    padding: 10px;
+}
+
+#cartaTitulo {
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .carta {
+        flex: 1 1 calc(100% - 20px); /* Para pantallas pequeñas, las cartas ocuparán el 100% del ancho del contenedor */
+    }
+}
+

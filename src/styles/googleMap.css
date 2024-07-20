@@ -5,9 +5,12 @@ iframe{
     position: relative;
     width: 70%;
     margin: 20px auto;
+    background-color: rgb(225, 142, 16);
+    
 }
 
 .contact-info{
+    background-color: chocolate;
     display: flex;
     flex-direction: column;
     align-items: center;

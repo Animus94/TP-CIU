@@ -15,7 +15,7 @@ function Catalogo() {
   return (
     <>
       {/*catalogo del menu*/}
-      {/* <img className="bk_image" src="fondo_cafeteria.jpg" /> */}
+      
       <section className="carousel">
         <button
           className="control-left"
