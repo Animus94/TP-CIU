@@ -5,10 +5,10 @@ function Navbar() {
   return (
     <header>
       <nav className="navbar">
-      <div>
-      <img src="logo.png" alt="Logo" className="logo" />
-      <span className="title">Cafe Otoñal</span>
-      </div>
+        <div className="contenedor-logo">
+          <img src="logo.png" alt="Logo" className="logo" />
+          <span className="title">Cafe Otoñal</span>
+        </div>
         <ul>
           {navbarLinks.map((item) => (
             <li>

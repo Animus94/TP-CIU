@@ -1,18 +1,28 @@
 
+:root {
+  --negro: #242424;
+--blanco: #dee2e6;
+--gris: #dee2e6;
+--marron: #c4aa83;
+}
+
 .carousel {
-    background: rgba(227, 196, 105, 0.389); 
-    padding: 20px;
+    background: var(--negro); 
+    padding: 50px;
     border-radius: 10px;
     backdrop-filter: blur(10px); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 60%;
-  
+    color: var(--blanco);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: auto;
     overflow: hidden;
+    min-width: 415px;
+    min-height: 250px;
+    max-height: 450px;
     
   }
 
@@ -29,14 +39,24 @@
     min-width: 100%;
   }
   
-  .carousel img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+
+  .image-container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    min-height: 300px;
   }
   
   .control-left,
   .control-right {
+    color: var(--blanco);
     background: none;
     border: none;
     font-size: 2rem;
@@ -60,23 +80,45 @@
     text-align: center;
     margin-top: 20px;
     text-decoration: none;
-    color: #000;
+    color: var(--blanco);
     font-weight: bold;
   }
  
-  .bk_image {
+  .presentacion {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Altura de todo el viewport */
+    overflow: hidden;
+  }
+  
+  .presentacion img {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    width: 50%;
-    height: 50%;
-    z-index: 0; 
-    object-fit: cover; 
-    filter: blur(5px);
-  }
-  .bk_image::before{
-    content: "efawefaf";
-    background-color: #000;
-    width: 50%;
+    width: 100%;
     height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    z-index: 1; /* Colocar la imagen en el fondo */
   }
+  
+  .presentacion h1,
+  .presentacion p {
+    position: absolute;
+    z-index: 2; /* Colocar el texto sobre la imagen */
+    color: white; /* Color del texto */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .presentacion h1 {
+    top: 20%; /* Ajustar la posición del título */
+    font-size: 5em;
+  }
+  
+  .presentacion p {
+    top: 50%; /* Ajustar la posición del párrafo */
+    font-size: 1.7em;
+    margin: 30px 10px;
+    font-weight: 500;
+  }
+  

@@ -3,10 +3,21 @@ import Catalogo from "../components/Catalogo";
 import GoogleMap from "../components/GoogleMap";
 import Presentacion from "../components/Presentacion";
 import Layout from "../layouts/Layout.astro";
+import {Fila} from "../components/Fila.jsx";
+import {Direccion} from "../components/Direccion.jsx";
+import {Imagen} from "../components/Imagen.jsx";
+import {Video} from "../components/Video.jsx";
 ---
 
 <Layout title="Cafeteria">
   <Presentacion />
-  <Catalogo client:load />
+  <Fila text="Descubre nuestro delicioso café. ¡Haz tu pedido ahora y disfruta de una taza perfecta!" direction="row">
+    <Catalogo client:load />
+  </Fila>
+  <Fila text="Ya podes visitar nuestro Local. Hace Click a la imagen para ver nuestro local" direction="row-reverse">
+    <Imagen href="https://www.youtube.com/watch?v=Z6Dx-o3vfJY" path="./nuestraCafeteria.jpg"/>
+  </Fila>
+<Video/>
+  <Direccion/>
   <GoogleMap />
 </Layout>

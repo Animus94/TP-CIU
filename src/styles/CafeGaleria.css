@@ -1,19 +1,14 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
+
+
+:root {
+    --negro: #242424;
+  --blanco: #dee2e6;
+  --gris: #dee2e6;
+  --marron: #c4aa83;
+  }
 
 .contenedorCartas {
-    background-color: rgb(169, 142, 75);
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-color: rgb(128, 92, 0);
-    background-image: url('hojas.jpeg');
-    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-
+    background-color: var(--blanco);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -22,17 +17,16 @@ body, html {
 }
 
 .carta {
-    flex: 1 1 calc(50% - 20px); /* Calcula el ancho de las cartas para que ocupen la mitad del contenedor menos el margen */
     margin: 10px;
-    background-color: rgb(133, 27, 27);
-    border: 5px solid rgb(189, 134, 108);
-    box-sizing: border-box;
-    max-width: 250px; /* Limita el ancho máximo de las cartas */
+    background-color: var(--negro);
+    max-width: 250px; 
+    border-radius: 10px;
 }
 
 .cartaImagen {
     width: 100%; /* Ajusta la imagen para que ocupe el 100% del ancho del contenedor */
     height: auto; /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 10px;
 }
 
 .cartaContent {
@@ -52,3 +46,6 @@ body, html {
     }
 }
 
+a{
+    font-weight: bold;
+}

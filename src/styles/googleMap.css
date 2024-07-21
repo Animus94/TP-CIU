@@ -1,20 +1,35 @@
+:root{
+    --negro: #242424;
+    --blanco: #dee2e6;
+    --gris: #dee2e6;
+    --marron: #c4aa83;
+}
+
+
 iframe{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 70%;
-    margin: 20px auto;
-    background-color: rgb(225, 142, 16);
-    
+    margin: auto;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.google-maps{
+    padding-bottom: 100px;
+    background-color: var(--gris);
 }
 
 .contact-info{
-    background-color: chocolate;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: var(--gris);
     & h2{
         margin-top: 50px;
         margin-bottom: -10px ;

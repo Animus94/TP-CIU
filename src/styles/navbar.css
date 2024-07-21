@@ -1,3 +1,10 @@
+:root{
+    --negro: #242424;
+    --blanco: #dee2e6;
+    --gris: #dee2e6;
+    --marron: #c4aa83;
+}
+
 /* navbar.css */
 
 body, html {
@@ -5,85 +12,50 @@ body, html {
     padding: 0;
     box-sizing: border-box;
 }
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(164, 31, 11);
-    transition: background-color 0.3s ease-in-out;
-    z-index: 1000; 
+  
+  .navbar {
     display: flex;
-    justify-content:space-between; 
+    background-color: var(--negro);
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .contenedor-logo {
+    display: flex;
     align-items: center;
-    padding: 10px;
-}
-
-.nav-links {
-    list-style: none;
+    margin-right: auto; /* Alinear el logo a la izquierda */
+  }
+  
+  .navbar ul {
     display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    flex-grow: 1; /* Permite que el ul crezca y ocupe el espacio disponible */
-    justify-content: flex-end; /* Alinea los enlaces al final del espacio disponible */
+    justify-content: center;
+    margin-right: 30px;
 }
 
-.nav-links li {
-    margin-right: 15px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.nav-links li:hover {
-    transform: scale(1.1);
-}
-
-
-
-.title {
-    color: #fff;
-    font-size: 24px; /* Ajusta el tamaño de la fuente según sea necesario */
-}
-
-/* para el scroll*/
-.navbar.scrolled {
-    background-color: rgba(255, 255, 255, 0.8); 
-}
-
-ul {
-    list-style: none;
+.navbar li {
     display: flex;
-    margin: 0;
-    padding: 0;
+    margin-right: 10px;
+    text-align: center;
+
 }
 
-li {
-    margin-right: 15px;
-    transition: transform 0.2s ease-in-out;
-}
-
-li:hover {
-    transform: scale(1.1);
-}
-
-.navbar a {
+.navbar li a {
+    color: var(--blanco);
     text-decoration: none;
-    color: rgb(231, 187, 29);
-    font-family: 'Arial Narrow Bold', sans-serif;
-    font-size: x-large;
-}
-
-.navbar.scrolled a {
-    color: rgb(0, 0, 0); /* Cambia el color del texto al desplazar */
-}
-
-/* Opcional: Estilo adicional para el contenedor principal */
-main {
-    padding-top: 70px; /* Para evitar que el contenido principal esté oculto detrás de la barra de navegación */
-}
+    margin-top: 0;
+  }
+  
+  .title {
+    margin-left: 10px;
+    color: var(--blanco);
+    font-weight: bold ;
+  }
 
 .logo {
-    width: 59px; /* Ajusta el tamaño según sea necesario */
+    width: 59px; 
     height: auto;
-    margin-right: 10px; /* Espacio entre el logo y el título */
-}
+    padding: 5px; 
+} 

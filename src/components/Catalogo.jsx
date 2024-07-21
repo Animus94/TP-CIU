@@ -15,7 +15,7 @@ function Catalogo() {
   return (
     <>
       {/*catalogo del menu*/}
-      
+
       <section className="carousel">
         <button
           className="control-left"
@@ -24,7 +24,9 @@ function Catalogo() {
           &#8249;
         </button>
         <article>
-          {/* <img src={currentItem.imageUrl} alt={currentItem.name} /> */}
+          <div className="image-container">
+            <img src={currentItem.img} alt={currentItem.name} />
+          </div>
           <h2>{currentItem.name}</h2>
           <p>{currentItem.description}</p>
           <p>${currentItem.price.toFixed(2)}</p>
